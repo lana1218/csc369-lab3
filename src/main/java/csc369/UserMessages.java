@@ -1,7 +1,10 @@
 package csc369;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Iterator;
+import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.util.ArrayList;
 
@@ -18,7 +21,7 @@ public class UserMessages {
 
     // Mapper for User file
     public static class UserMapper extends Mapper<Text, Text, Text, Text> {
-	@Override
+		@Override
         public void map(Text key, Text value, Context context)  throws IOException, InterruptedException {
 	    String name = value.toString();
 	    String out = "A\t"+name;

@@ -1,0 +1,73 @@
+// Problem 1
+> ./gradlew run --args="CountryCount input_access_log/ out_wc/"
+output:
+Australia	17
+Canada	127
+Denmark	4
+Finland	1
+France	16
+Germany	13
+Intranet	198
+Israel	19
+Korea	4
+Los Alamos	1
+...
+
+> ./gradlew run --args="ReverseKeyValue out_wc/ q1/"
+812	Unknown Location
+198	Intranet
+127	Canada
+87	United States
+80	Robot
+19	Israel
+17	Australia
+16	France
+13	Wherever You Want to Ship
+13	Germany
+
+
+
+// Problem 2
+> ./gradlew run --args="CountryURLCount input_access_log/ out2/"
+output:
+Australia	/icons/PythonPowered.png	1
+Australia	/icons/gnu-head-tiny.jpg	1
+Australia	/icons/mailman.jpg	1
+Australia	/mailman	1
+Australia	/mailman/admin	1
+Australia	/mailman/admin/webct	1
+Australia	/mailman/listinfo	2
+Australia	/mailman/listinfo/administration	1
+Australia	/mailman/listinfo/cnc_notice	1
+Australia	/twiki/bin/view/Main/SpamAssassinAndPostFix	2
+...
+
+> ./gradlew run --args="GroupByCountryURLCount out2/ q2/"
+output:
+Australia	/twiki/bin/view/Main/SpamAssassinDeleting	2
+Australia	/twiki/bin/view/Main/SpamAssassinAndPostFix	2
+Australia	/mailman/listinfo	2
+Australia	/icons/PythonPowered.png	1
+Australia	/mailman/listinfo/administration	1
+Australia	/mailman/admin/webct	1
+Australia	/mailman/admin	1
+Australia	/twiki/bin/view/Main/SpamAssassinTaggingOnly	1
+Australia	/mailman/listinfo/cnc_notice	1
+Australia	/mailman	1
+
+
+
+// Problem 3
+> ./gradlew run --args="URLCountryCount input_access_log/ q3/"
+output:
+/	Canada, France, Intranet, Israel, Netherlands, Robot, United Kingdom, United States, Unknown Location, Wherever You Want to Ship
+/AmavisNew.html	United States, Unknown Location
+/DCC.html	United Kingdom, Unknown Location
+/LateEmail.html	Canada, United States, Unknown Location
+/M83A	Taiwan
+/MSOffice/cltreq.asp?UL=1&ACT=4&BUILD=2614&STRMVER=4&CAPREQ=0	Unknown Location
+/RBL.html	Canada, Unknown Location
+/SpamAssassin.html	Canada, Germany, Israel, Netherlands, United States, Unknown Location
+/_vti_bin/owssvr.dll?UL=1&ACT=4&BUILD=2614&STRMVER=4&CAPREQ=0	Unknown Location
+/antivirus.html	Unknown Location
+...
